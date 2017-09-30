@@ -1,22 +1,32 @@
 .background-image {
   float: left;
   filter: grayscale(100%);
-  opacity: 0.4;
+  opacity: 0.3;
   /*margin: 0 auto;*/
 }
 
-.App {
-  text-align: center;
+.container {
+  position: relative;
+  z-index: -1;
 }
 
-.App-logo {
+.graphics {
+  position: absolute;
+  z-index: 0;
+}
+
+/*.App {
+  text-align: center;
+}*/
+
+/*.App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 50px;
-}
+}*/
 
 .App-header {
   background-color: #222;
-  height: 100px;
+  height: 50px;
   padding: 15px;
   color: white;
 }

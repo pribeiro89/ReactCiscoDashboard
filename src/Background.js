@@ -14,15 +14,16 @@ class Background extends Component {
             .then(results => {
                 return results.json();
             }).then(data => {
+                let key = 0;
                 let pictures = data.results.map((pic) => {
+                    key++;
                     return (
-                        <div className="background-image" key={pic.results}>
-                            <img src={pic.picture.medium} />
+                        <div className="background-image" key={key}>
+                            <img src={pic.picture.medium} alt="" />
                         </div>
                     )
-                })
+                });
                 this.setState({pictures: pictures});
-                console.log("state", this.state.pictures);
             })
     }
 
