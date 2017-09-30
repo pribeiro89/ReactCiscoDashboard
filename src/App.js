@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Cisco Dashboard</h1>
+          <h1 className="App-title">Cisco Dashboard - How many at Pixels Camp?</h1>
         </header>
 
         <Background />

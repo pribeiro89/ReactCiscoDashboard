@@ -43,10 +43,6 @@ class Graphics extends Component {
             { name: "Last 3 days", value: this.state.threedays },
             { name: "Last 7 days", value: this.state.lastweek }
         ];
-        let data02 = [
-            { name: "Today", value: this.state.today }, 
-            { name: "Yesterday", value: this.state.yesterday }
-        ];
         let data = [
             { name: "Today", Passerby: this.state.today }, 
             { name: "Yesterday", Passerby: this.state.yesterday },
@@ -56,19 +52,23 @@ class Graphics extends Component {
         return (
             <div className="content">
                 <div className="graphics">
-                    <PieChart width={730} height={250}>
-                      <Pie data={data01} cx="50%" cy="50%" outerRadius={50} fill="#808080" />
-                      <Pie data={data02} cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#000" label />
-                    </PieChart>
-
-                    <BarChart width={500} height={250} data={data}>
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <CartesianGrid strokeDasharray="4 4" />
-                      <Tooltip />
-                      <Legend />
-                      <Bar dataKey="Passerby" fill="#808080" />
-                    </BarChart>
+                    <div id="pie">
+                        <PieChart width={730} height={250}>
+                          <Tooltip />
+                          <Pie data={data01} cx="50%" cy="50%" outerRadius={50} fill="#808080" />
+                          <Pie data={data01} cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#000" label />
+                        </PieChart>
+                    </div>
+                    <div id="bar">
+                        <BarChart width={500} height={250} data={data}>
+                          <XAxis dataKey="name" />
+                          <YAxis />
+                          <CartesianGrid strokeDasharray="4 4" />
+                          <Tooltip />
+                          <Legend />
+                          <Bar dataKey="Passerby" fill="#808080" />
+                        </BarChart>
+                    </div>
                 </div>
             </div>
         );
